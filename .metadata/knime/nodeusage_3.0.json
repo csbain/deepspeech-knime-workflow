@@ -38,33 +38,33 @@
             },
             {
                 "id":"org.knime.json.node.fromstring.StringToJSONNodeFactory#String to JSON",
-                "nrexecs":13,
+                "nrexecs":15,
                 "nrfails":2,
-                "exectime":941,
+                "exectime":1037,
                 "nrcreated":2,
                 "successor":"org.knime.json.node.jsonpath.multi.JSONPathNodeFactory#JSON Path"
             },
             {
                 "id":"org.knime.base.node.viz.table.TableNodeFactory#Interactive Table",
-                "nrexecs":14,
+                "nrexecs":17,
                 "nrfails":0,
-                "exectime":55,
+                "exectime":57,
                 "nrcreated":2,
                 "successor":"n/a"
             },
             {
                 "id":"org.knime.json.node.jsonpath.multi.JSONPathNodeFactory#JSON Path",
-                "nrexecs":30,
+                "nrexecs":32,
                 "nrfails":1,
-                "exectime":1842,
+                "exectime":1904,
                 "nrcreated":1,
                 "successor":"org.knime.base.node.preproc.ungroup.UngroupNodeFactory#Ungroup"
             },
             {
                 "id":"org.knime.base.node.preproc.ungroup.UngroupNodeFactory#Ungroup",
-                "nrexecs":38,
+                "nrexecs":40,
                 "nrfails":0,
-                "exectime":398,
+                "exectime":410,
                 "nrcreated":1,
                 "successor":"org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory#Column Filter"
             },
@@ -118,9 +118,9 @@
             },
             {
                 "id":"org.knime.js.base.node.quickform.input.filechooser.FileChooserQuickFormNodeFactory#File Chooser",
-                "nrexecs":15,
+                "nrexecs":17,
                 "nrfails":0,
-                "exectime":146,
+                "exectime":279,
                 "nrcreated":3,
                 "successor":"org.knime.base.filehandling.filestobinaryobjects.FilesToBinaryObjectsNodeFactory#Files to Binary Objects"
             },
@@ -238,9 +238,9 @@
             },
             {
                 "id":"org.knime.base.filehandling.stringtouri.StringToURINodeFactory#String to URI",
-                "nrexecs":19,
+                "nrexecs":21,
                 "nrfails":0,
-                "exectime":278,
+                "exectime":280,
                 "nrcreated":0,
                 "successor":"ws.palladian.nodes.retrieval.utils.FormEncodedHttpEntityCreatorNodeFactory#FormEncodedHttpEntityCreator"
             },
@@ -286,25 +286,25 @@
             },
             {
                 "id":"org.knime.core.node.workflow.virtual.subnode.VirtualSubNodeInputNodeFactory#WrappedNode Input",
-                "nrexecs":8,
+                "nrexecs":10,
                 "nrfails":0,
-                "exectime":29,
+                "exectime":35,
                 "nrcreated":0,
                 "successor":"n/a"
             },
             {
                 "id":"org.knime.core.node.workflow.virtual.subnode.VirtualSubNodeOutputNodeFactory#WrappedNode Output",
-                "nrexecs":7,
+                "nrexecs":9,
                 "nrfails":0,
-                "exectime":40,
+                "exectime":41,
                 "nrcreated":0,
                 "successor":"n/a"
             },
             {
                 "id":"org.knime.js.base.node.quickform.input.string.StringInputQuickFormNodeFactory#String Input",
-                "nrexecs":55,
+                "nrexecs":60,
                 "nrfails":0,
-                "exectime":404,
+                "exectime":415,
                 "nrcreated":2,
                 "successor":"org.knime.base.node.util.mergevariables.MergeVariablesNodeFactory#Merge Variables"
             },
@@ -358,17 +358,17 @@
             },
             {
                 "id":"org.knime.base.node.jsnippet.JavaSnippetNodeFactory#Java Snippet",
-                "nrexecs":21,
+                "nrexecs":23,
                 "nrfails":3,
-                "exectime":2543519,
+                "exectime":3058619,
                 "nrcreated":1,
                 "successor":"org.knime.json.node.jsonpath.multi.JSONPathNodeFactory#JSON Path"
             },
             {
                 "id":"org.knime.base.filehandling.urltofilepath.UrlToFilePathNodeFactory#URL to File Path",
-                "nrexecs":8,
+                "nrexecs":10,
                 "nrfails":0,
-                "exectime":197,
+                "exectime":289,
                 "nrcreated":1,
                 "successor":"org.knime.base.node.jsnippet.JavaSnippetNodeFactory#Java Snippet"
             },
@@ -406,9 +406,9 @@
             },
             {
                 "id":"org.knime.base.node.util.mergevariables.MergeVariablesNodeFactory#Merge Variables",
-                "nrexecs":18,
+                "nrexecs":22,
                 "nrfails":0,
-                "exectime":451,
+                "exectime":552,
                 "nrcreated":1,
                 "successor":"org.knime.base.node.jsnippet.JavaSnippetNodeFactory#Java Snippet"
             },
@@ -454,9 +454,9 @@
             },
             {
                 "id":"org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory#Column Filter",
-                "nrexecs":11,
+                "nrexecs":13,
                 "nrfails":0,
-                "exectime":28,
+                "exectime":30,
                 "nrcreated":1,
                 "successor":"org.knime.json.node.totable.JSONToTableNodeFactory#JSON to Table"
             },
@@ -472,17 +472,17 @@
         "metaNodes":{
         },
         "wrappedNodes":{
-            "nrexecs":7,
+            "nrexecs":9,
             "nrfails":3,
-            "exectime":1544048,
+            "exectime":2060066,
             "nrcreated":0
         }
     },
-    "uptime":95186771,
+    "uptime":95470373,
     "workflowsOpened":26,
     "remoteWorkflowsOpened":28,
     "launches":19,
-    "timeSinceLastStart":43073049,
+    "timeSinceLastStart":48461484,
     "crashes":1,
     "properlyShutDown":false
 }
