@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns="http://www.knime.org/2008/09/XMLConfig" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.knime.org/2008/09/XMLConfig http://www.knime.org/XMLConfig_2008_09.xsd" key="settings.xml">
+<entry key="node_file" type="xstring" value="settings.xml"/>
+<config key="flow_stack"/>
+<config key="internal_node_subsettings">
+<entry key="memory_policy" type="xstring" value="CacheSmallInMemory"/>
+</config>
+<config key="model">
+<entry key="scriptImports" type="xstring" value="// Your custom imports:%%00010import java.io.File;%%00010import java.io.OutputStream;%%00010import java.io.OutputStreamWriter;%%00010import java.io.InputStream;%%00010import java.io.InputStreamReader;%%00010import java.io.PrintWriter;%%00010import java.io.BufferedReader;%%00010import java.net.HttpURLConnection;%%00010import java.net.URL;%%00010import java.net.URLConnection;%%00010import java.nio.file.Files;"/>
+<entry key="scriptFields" type="xstring" value=""/>
+<entry key="scriptBody" type="xstring" value="// Enter your code here:%%00010%%00009String url = &quot;http://&quot;+v_server_hostname+&quot;:&quot;+v_port+&quot;/process?vad_aggressiveness=&quot;+v_vad+&quot;&amp;processes=&quot;+v_processes;%%00010%%00009String charset = &quot;UTF-8&quot;;%%00010%%00009File binaryFile = new File(c_Filepath);%%00010%%00009String boundary = Long.toHexString(System.currentTimeMillis()); // Just generate some unique random value.%%00010%%00009String CRLF = &quot;\r\n&quot;; // Line separator required by multipart/form-data.%%00010%%00009try{%%00010%%00009      URLConnection connection = new URL(url).openConnection();%%00010%%00009      connection.setDoOutput(true);%%00010%%00009      connection.setRequestProperty(&quot;Content-Type&quot;, &quot;multipart/form-data; boundary=&quot; + boundary);%%00010%%00009      OutputStream output = connection.getOutputStream();%%00010%%00009      PrintWriter writer = new PrintWriter(new OutputStreamWriter(output, charset), true);%%00010%%00009      writer.append(&quot;--&quot; + boundary).append(CRLF);%%00010%%00009      writer.append(&quot;Content-Disposition: form-data; name=\&quot;file\&quot;; filename=\&quot;&quot; + binaryFile.getName() + &quot;\&quot;&quot;).append(CRLF);%%00010%%00009      writer.append(&quot;Content-Type: &quot; + URLConnection.guessContentTypeFromName(binaryFile.getName())).append(CRLF);%%00010%%00009      writer.append(&quot;Content-Transfer-Encoding: binary&quot;).append(CRLF);%%00010%%00009      writer.append(CRLF).flush();%%00010%%00009      Files.copy(binaryFile.toPath(), output);%%00010%%00009      output.flush(); // Important before continuing with writer!%%00010%%00009      writer.append(CRLF).flush(); // CRLF is important! It indicates end of boundary.%%00010%%00009      // End of multipart/form-data.%%00010%%00009      writer.append(&quot;--&quot; + boundary + &quot;--&quot;).append(CRLF).flush();%%00010%%00009      String response = ((HttpURLConnection) connection).getResponseMessage();%%00010%%00009      int responseCode = ((HttpURLConnection) connection).getResponseCode();%%00010%%00009%%00009 InputStream inputStream = ((HttpURLConnection) connection).getInputStream();%%00010%%00010%%00009%%00009 BufferedReader in = new BufferedReader(%%00010%%00009%%00009        new InputStreamReader(%%00010%%00009%%00009            inputStream));%%00010%%00010%%00009%%00009 StringBuilder sb = new StringBuilder();%%00010    %%00009%%00009 String currentLine;%%00010%%00009%%00009 while ((currentLine = in.readLine()) != null) %%00010%%00009%%00009        sb.append(currentLine);%%00010%%00009%%00009%%00010%%00009%%00009 in.close();%%00010%%00009%%00009 %%00010%%00009%%00009 out_sr_result = sb.toString();%%00010%%00009%%00009 out_sr_response_code = responseCode;%%00010%%00010%%00009%%00009 %%00010%%00009}catch(Exception ex){%%00010%%00009%%00009throw new Abort(ex.getMessage().toString());%%00010%%00009}%%00010%%00009//      System.out.println(response);%%00010%%00009//      System.out.println(responseCode); // Should be 200%%00010%%00010%%00010%%00010"/>
+<config key="jarFiles">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="outCols">
+<entry key="array-size" type="xint" value="2"/>
+<config key="0">
+<entry key="Name" type="xstring" value="sr_result"/>
+<entry key="JavaName" type="xstring" value="out_sr_result"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<config key="Type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+<entry key="is_null" type="xboolean" value="false"/>
+</config>
+<entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.StringCell$StringCellFactory.createCell(class java.lang.String)"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+<config key="1">
+<entry key="Name" type="xstring" value="sr_response_code"/>
+<entry key="JavaName" type="xstring" value="out_sr_response_code"/>
+<entry key="JavaType" type="xstring" value="java.lang.Integer"/>
+<config key="Type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.IntCell"/>
+<entry key="is_null" type="xboolean" value="false"/>
+</config>
+<entry key="ConverterFactory" type="xstring" value="org.knime.core.data.def.IntCell$IntCellFactory.create(class java.lang.Integer)"/>
+<entry key="replaceExisting" type="xboolean" value="false"/>
+</config>
+</config>
+<config key="outVars">
+<entry key="array-size" type="xint" value="0"/>
+</config>
+<config key="inCols">
+<entry key="array-size" type="xint" value="1"/>
+<config key="0">
+<entry key="Name" type="xstring" value="File path"/>
+<entry key="JavaName" type="xstring" value="c_Filepath"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<config key="Type">
+<entry key="cell_class" type="xstring" value="org.knime.core.data.def.StringCell"/>
+<entry key="is_null" type="xboolean" value="false"/>
+</config>
+<entry key="ConverterFactory" type="xstring" value="org.knime.core.data.convert.java.SimpleDataCellToJavaConverterFactory(StringValue,class java.lang.String,String)"/>
+</config>
+</config>
+<config key="inVars">
+<entry key="array-size" type="xint" value="4"/>
+<config key="0">
+<entry key="Name" type="xstring" value="vad"/>
+<entry key="JavaName" type="xstring" value="v_vad"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+</config>
+<config key="1">
+<entry key="Name" type="xstring" value="server-hostname"/>
+<entry key="JavaName" type="xstring" value="v_server_hostname"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+</config>
+<config key="2">
+<entry key="Name" type="xstring" value="processes"/>
+<entry key="JavaName" type="xstring" value="v_processes"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+</config>
+<config key="3">
+<entry key="Name" type="xstring" value="server-port"/>
+<entry key="JavaName" type="xstring" value="v_port"/>
+<entry key="JavaType" type="xstring" value="java.lang.String"/>
+<entry key="Type" type="xstring" value="STRING"/>
+</config>
+</config>
+<entry key="version" type="xstring" value="version 1.x"/>
+<entry key="templateUUID" type="xstring" isnull="true" value=""/>
+<entry key="runOnExecute" type="xboolean" value="false"/>
+</config>
+<config key="nodeAnnotation">
+<entry key="text" type="xstring" value="Connection to %%00013%%00010Deepspeech Server%%00013%%00010"/>
+<entry key="bgcolor" type="xint" value="16777215"/>
+<entry key="x-coordinate" type="xint" value="446"/>
+<entry key="y-coordinate" type="xint" value="379"/>
+<entry key="width" type="xint" value="109"/>
+<entry key="height" type="xint" value="45"/>
+<entry key="alignment" type="xstring" value="CENTER"/>
+<entry key="borderSize" type="xint" value="0"/>
+<entry key="borderColor" type="xint" value="16777215"/>
+<entry key="defFontSize" type="xint" value="9"/>
+<entry key="annotation-version" type="xint" value="20151123"/>
+<config key="styles"/>
+</config>
+<entry key="customDescription" type="xstring" isnull="true" value=""/>
+<entry key="state" type="xstring" value="EXECUTED"/>
+<entry key="factory" type="xstring" value="org.knime.base.node.jsnippet.JavaSnippetNodeFactory"/>
+<entry key="node-name" type="xstring" value="Java Snippet"/>
+<entry key="node-bundle-name" type="xstring" value="KNIME Java Snippet Nodes"/>
+<entry key="node-bundle-symbolic-name" type="xstring" value="org.knime.jsnippets"/>
+<entry key="node-bundle-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-bundle-version" type="xstring" value="3.5.4.v201806111418"/>
+<entry key="node-feature-name" type="xstring" value="KNIME Core"/>
+<entry key="node-feature-symbolic-name" type="xstring" value="org.knime.features.base.feature.group"/>
+<entry key="node-feature-vendor" type="xstring" value="KNIME AG, Zurich, Switzerland"/>
+<entry key="node-feature-version" type="xstring" value="3.5.4.v201806111433"/>
+<config key="factory_settings"/>
+<entry key="name" type="xstring" value="Java Snippet"/>
+<entry key="hasContent" type="xboolean" value="true"/>
+<entry key="isInactive" type="xboolean" value="false"/>
+<config key="ports">
+<config key="port_1">
+<entry key="index" type="xint" value="1"/>
+<entry key="port_spec_class" type="xstring" value="org.knime.core.data.DataTableSpec"/>
+<entry key="port_object_class" type="xstring" value="org.knime.core.node.BufferedDataTable"/>
+<entry key="port_object_summary" type="xstring" value="Rows: 1, Cols: 8"/>
+<entry key="port_dir_location" type="xstring" value="port_1"/>
+</config>
+</config>
+<config key="filestores">
+<entry key="file_store_location" type="xstring" isnull="true" value=""/>
+<entry key="file_store_id" type="xstring" value="36282c0d-83c4-45be-b8a6-f868048fae5d"/>
+</config>
+</config>

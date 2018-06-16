@@ -1,0 +1,60 @@
+
+{
+    "type":"object",
+    "properties":{
+        "vad-640:633":{
+            "type":"string",
+            "default":"2",
+            "description":"VAD Aggressiveness",
+            "example":"2"
+        },
+        "server-hostname-640:635":{
+            "type":"string",
+            "default":"13.55.9.160",
+            "description":"IP address / Hostname of KNIME Deepspeech Server (Excluding http://)",
+            "example":"13.55.9.160"
+        },
+        "server-port-640:113":{
+            "type":"string",
+            "default":"5000",
+            "description":"Port of KNIME Deepspeech Server",
+            "example":"5000"
+        },
+        "processes-640:631":{
+            "type":"string",
+            "default":"MAX",
+            "description":"Processes",
+            "example":"MAX"
+        },
+        "file-chooser-640:10":{
+            "type":"object",
+            "properties":{
+                "items":{
+                    "type":"array",
+                    "items":{
+                        "type":"object",
+                        "properties":{
+                            "path":{
+                                "type":"string",
+                                "default":"knime://LOCAL/data/alice.mp3"
+                            },
+                            "type":{
+                                "type":"string",
+                                "default":"DATA"
+                            }
+                        }
+                    }
+                }
+            },
+            "description":"Enter Description",
+            "example":{
+                "items":[
+                    {
+                        "path":"knime://LOCAL/data/alice.mp3",
+                        "type":"DATA"
+                    }
+                ]
+            }
+        }
+    }
+}

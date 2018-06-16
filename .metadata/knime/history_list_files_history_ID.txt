@@ -1,0 +1,4 @@
+C:\Users\chris\knime-workspace\data
+C:\Users\chris\knime-workspace\KNIME_project
+knime://knime.workflow/data/
+D:\

@@ -1,0 +1,488 @@
+
+{
+    "version":"3.5.3.v201804031105",
+    "created":"2018-03-27 21:57",
+    "nodestats":{
+        "nodes":[
+            {
+                "id":"org.knime.json.node.reader.JSONReaderNodeFactory#JSON Reader",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":324,
+                "nrcreated":2,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.io.filereader.FileReaderNodeFactory#File Reader",
+                "nrexecs":8,
+                "nrfails":0,
+                "exectime":1089,
+                "nrcreated":3,
+                "successor":"ws.palladian.nodes.retrieval.utils.multipart.MultipartEncodedHttpEntityCreatorNodeFactory#MultipartEncodedHttpEntityCreator"
+            },
+            {
+                "id":"org.knime.json.node.input.JSONInputNodeFactory#JSON Input",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":102,
+                "nrcreated":2,
+                "successor":"org.knime.json.node.totable.JSONToTableNodeFactory#JSON to Table"
+            },
+            {
+                "id":"org.knime.json.node.totable.JSONToTableNodeFactory#JSON to Table",
+                "nrexecs":15,
+                "nrfails":0,
+                "exectime":27851,
+                "nrcreated":3,
+                "successor":"org.knime.base.node.preproc.ungroup.UngroupNodeFactory#Ungroup"
+            },
+            {
+                "id":"org.knime.json.node.fromstring.StringToJSONNodeFactory#String to JSON",
+                "nrexecs":13,
+                "nrfails":2,
+                "exectime":941,
+                "nrcreated":2,
+                "successor":"org.knime.json.node.jsonpath.multi.JSONPathNodeFactory#JSON Path"
+            },
+            {
+                "id":"org.knime.base.node.viz.table.TableNodeFactory#Interactive Table",
+                "nrexecs":14,
+                "nrfails":0,
+                "exectime":55,
+                "nrcreated":2,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.json.node.jsonpath.multi.JSONPathNodeFactory#JSON Path",
+                "nrexecs":30,
+                "nrfails":1,
+                "exectime":1842,
+                "nrcreated":1,
+                "successor":"org.knime.base.node.preproc.ungroup.UngroupNodeFactory#Ungroup"
+            },
+            {
+                "id":"org.knime.base.node.preproc.ungroup.UngroupNodeFactory#Ungroup",
+                "nrexecs":38,
+                "nrfails":0,
+                "exectime":398,
+                "nrcreated":1,
+                "successor":"org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory#Column Filter"
+            },
+            {
+                "id":"org.knime.rest.nodes.post.RestPostNodeFactory#POST Request",
+                "nrexecs":17,
+                "nrfails":1,
+                "exectime":30622,
+                "nrcreated":2,
+                "successor":"org.knime.base.node.preproc.ungroup.UngroupNodeFactory#Ungroup"
+            },
+            {
+                "id":"org.knime.ext.cxf.webservice.client.node.CxfClientNodeFactory#Generic Web Service Client",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":2,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.filehandling.remote.connectioninformation.node.http.HTTPConnectionInformationNodeFactory#HTTP Connection",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":2,
+                "nrcreated":2,
+                "successor":"org.knime.base.filehandling.upload2.UploadNodeFactory#Upload"
+            },
+            {
+                "id":"ws.palladian.nodes.retrieval.utils.FormEncodedHttpEntityCreatorNodeFactory#FormEncodedHttpEntityCreator",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":3,
+                "successor":"org.knime.rest.nodes.post.RestPostNodeFactory#POST Request"
+            },
+            {
+                "id":"ws.palladian.nodes.retrieval.utils.multipart.MultipartEncodedHttpEntityCreatorNodeFactory#MultipartEncodedHttpEntityCreator",
+                "nrexecs":17,
+                "nrfails":3,
+                "exectime":1489,
+                "nrcreated":1,
+                "successor":"ws.palladian.nodes.retrieval.HttpResultDataExtractorNodeFactory#HttpResultDataExtractor"
+            },
+            {
+                "id":"org.knime.base.node.flowcontrol.sleep.SleepNodeFactory#Wait...",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.js.base.node.quickform.input.filechooser.FileChooserQuickFormNodeFactory#File Chooser",
+                "nrexecs":15,
+                "nrfails":0,
+                "exectime":146,
+                "nrcreated":3,
+                "successor":"org.knime.base.filehandling.filestobinaryobjects.FilesToBinaryObjectsNodeFactory#Files to Binary Objects"
+            },
+            {
+                "id":"org.knime.js.base.node.quickform.input.fileupload.FileUploadQuickFormNodeFactory#File Upload",
+                "nrexecs":3,
+                "nrfails":0,
+                "exectime":63,
+                "nrcreated":3,
+                "successor":"org.knime.base.filehandling.filestobinaryobjects.FilesToBinaryObjectsNodeFactory#Files to Binary Objects"
+            },
+            {
+                "id":"ws.palladian.nodes.retrieval.HttpResultDataExtractorNodeFactory#HttpResultDataExtractor",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.explorer.nodes.browser.ExplorerBrowserNodeFactory#Explorer Browser",
+                "nrexecs":5,
+                "nrfails":0,
+                "exectime":75,
+                "nrcreated":3,
+                "successor":"org.knime.base.node.io.listfiles2.ListFilesNodeFactory#List Files"
+            },
+            {
+                "id":"org.knime.base.filehandling.filestobinaryobjects.FilesToBinaryObjectsNodeFactory#Files to Binary Objects",
+                "nrexecs":10,
+                "nrfails":0,
+                "exectime":1129,
+                "nrcreated":1,
+                "successor":"ws.palladian.nodes.retrieval.utils.FormEncodedHttpEntityCreatorNodeFactory#FormEncodedHttpEntityCreator"
+            },
+            {
+                "id":"org.knime.base.filehandling.upload2.UploadNodeFactory#Upload",
+                "nrexecs":0,
+                "nrfails":2,
+                "exectime":387,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.audio.node.urltoaudio.UrlToAudioNodeFactory#URL To Audio",
+                "nrexecs":0,
+                "nrfails":3,
+                "exectime":93,
+                "nrcreated":2,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.audio.node.reader.AudioReaderNodeFactory#List Audio Files",
+                "nrexecs":4,
+                "nrfails":11,
+                "exectime":321,
+                "nrcreated":0,
+                "successor":"org.knime.base.filehandling.upload2.UploadNodeFactory#Upload"
+            },
+            {
+                "id":"org.knime.audio.node.viewer.AudioViewerNodeFactory#Audio Viewer",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":1,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.io.listfiles2.ListFilesNodeFactory#List Files",
+                "nrexecs":5,
+                "nrfails":0,
+                "exectime":125,
+                "nrcreated":1,
+                "successor":"org.knime.base.filehandling.filestobinaryobjects.FilesToBinaryObjectsNodeFactory#Files to Binary Objects"
+            },
+            {
+                "id":"org.knime.base.node.flowvariable.tablecoltovariable.TableColumnToVariableNodeFactory#Table Column to Variable",
+                "nrexecs":2,
+                "nrfails":0,
+                "exectime":1,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"com.tibco.ext.spotfire.filereader.SpotfireFileReaderNodeFactory#TIBCO Spotfire File Reader",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.flowvariable.createfilename.CreateFilenameNodeFactory#Create File Name",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.jsnippet.JavaEditVarNodeFactory#Java Edit Variable",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":2,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.filehandling.binaryobjectstofiles.BinaryObjectsToFilesNodeFactory#Binary Objects to Files",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.filehandling.stringtouri.StringToURINodeFactory#String to URI",
+                "nrexecs":19,
+                "nrfails":0,
+                "exectime":278,
+                "nrcreated":0,
+                "successor":"ws.palladian.nodes.retrieval.utils.FormEncodedHttpEntityCreatorNodeFactory#FormEncodedHttpEntityCreator"
+            },
+            {
+                "id":"org.knime.base.node.util.createtempdir.CreateTempDirectoryNodeFactory#Create Temp Dir",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":5,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.ext.sun.nodes.script.node.editvar.JavaEditVariableNodeFactory#Java Edit Variable (simple)",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":13,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.util.sampledata.SampleDataNodeFactory#Data Generator",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":635,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.io.csvwriter.CSVWriterNodeFactory#CSV Writer",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":152,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.flowvariable.variabletotablerow2.VariableToTable2NodeFactory#Variable to Table Row",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":19,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.core.node.workflow.virtual.subnode.VirtualSubNodeInputNodeFactory#WrappedNode Input",
+                "nrexecs":8,
+                "nrfails":0,
+                "exectime":29,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.core.node.workflow.virtual.subnode.VirtualSubNodeOutputNodeFactory#WrappedNode Output",
+                "nrexecs":7,
+                "nrfails":0,
+                "exectime":40,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.js.base.node.quickform.input.string.StringInputQuickFormNodeFactory#String Input",
+                "nrexecs":55,
+                "nrfails":0,
+                "exectime":404,
+                "nrcreated":2,
+                "successor":"org.knime.base.node.util.mergevariables.MergeVariablesNodeFactory#Merge Variables"
+            },
+            {
+                "id":"org.erlwood.knime.nodes.uploadfileswithauth.UploadFilesWithAuthNodeFactory#Upload Files with Authentication",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.data.world.restful.AddDatasetFileNodeFactory#data.world Upload Files",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"ws.palladian.nodes.retrieval.HttpRetrieverNodeFactory2#HttpRetriever",
+                "nrexecs":0,
+                "nrfails":3,
+                "exectime":65332,
+                "nrcreated":1,
+                "successor":"org.knime.base.node.preproc.ungroup.UngroupNodeFactory#Ungroup"
+            },
+            {
+                "id":"org.knime.base.node.flowvariable.appendvariabletotable2.AppendVariableToTable2NodeFactory#Variable to Table Column",
+                "nrexecs":2,
+                "nrfails":0,
+                "exectime":7,
+                "nrcreated":1,
+                "successor":"org.knime.base.node.flowvariable.appendvariabletotable2.AppendVariableToTable2NodeFactory#Variable to Table Column"
+            },
+            {
+                "id":"org.knime.ext.sun.nodes.script.JavaScriptingNodeFactory#Java Snippet (simple)",
+                "nrexecs":2,
+                "nrfails":0,
+                "exectime":86,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.collection.list.create2.CollectionCreate2NodeFactory#Create Collection Column",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":11,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.jsnippet.JavaSnippetNodeFactory#Java Snippet",
+                "nrexecs":21,
+                "nrfails":3,
+                "exectime":2543519,
+                "nrcreated":1,
+                "successor":"org.knime.json.node.jsonpath.multi.JSONPathNodeFactory#JSON Path"
+            },
+            {
+                "id":"org.knime.base.filehandling.urltofilepath.UrlToFilePathNodeFactory#URL to File Path",
+                "nrexecs":8,
+                "nrfails":0,
+                "exectime":197,
+                "nrcreated":1,
+                "successor":"org.knime.base.node.jsnippet.JavaSnippetNodeFactory#Java Snippet"
+            },
+            {
+                "id":"org.knime.audio.node.recognizer.cmusphinx.CMUSphinxSRNodeFactory#CMUSphinx4 SR",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":555043,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.preproc.constantvalue.ConstantValueColumnNodeFactory#Constant Value Column",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":3,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.preproc.rename.RenameNodeFactory#Column Rename",
+                "nrexecs":1,
+                "nrfails":0,
+                "exectime":3,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.audio.node.recognizer.ibmwatson.IBMWatsonSRNodeFactory#IBM Watson SR",
+                "nrexecs":0,
+                "nrfails":1,
+                "exectime":1818,
+                "nrcreated":0,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.util.mergevariables.MergeVariablesNodeFactory#Merge Variables",
+                "nrexecs":18,
+                "nrfails":0,
+                "exectime":451,
+                "nrcreated":1,
+                "successor":"org.knime.base.node.jsnippet.JavaSnippetNodeFactory#Java Snippet"
+            },
+            {
+                "id":"org.knime.base.node.preproc.stringmanipulation.variable.StringManipulationVariableNodeFactory#String Manipulation (Variable)",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.js.base.node.output.filedownload.FileDownloadNodeFactory#File Download",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.js.base.node.output.text.TextOutputNodeFactory#Text Output",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.js.base.node.quickform.input.listbox.ListBoxInputQuickFormNodeFactory#List Box Input",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":2,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.json.node.patch.apply.JSONPatchApplyNodeFactory#JSON Transformer",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":2,
+                "successor":"n/a"
+            },
+            {
+                "id":"org.knime.base.node.preproc.filter.column.DataColumnSpecFilterNodeFactory#Column Filter",
+                "nrexecs":11,
+                "nrfails":0,
+                "exectime":28,
+                "nrcreated":1,
+                "successor":"org.knime.json.node.totable.JSONToTableNodeFactory#JSON to Table"
+            },
+            {
+                "id":"org.knime.json.node.jsonpath.dict.JSONPathDictNodeFactory#JSON Path (Dictionary)",
+                "nrexecs":0,
+                "nrfails":0,
+                "exectime":0,
+                "nrcreated":1,
+                "successor":"n/a"
+            }
+        ],
+        "metaNodes":{
+        },
+        "wrappedNodes":{
+            "nrexecs":7,
+            "nrfails":3,
+            "exectime":1544048,
+            "nrcreated":0
+        }
+    },
+    "uptime":95186771,
+    "workflowsOpened":26,
+    "remoteWorkflowsOpened":28,
+    "launches":19,
+    "timeSinceLastStart":43073049,
+    "crashes":1,
+    "properlyShutDown":false
+}
