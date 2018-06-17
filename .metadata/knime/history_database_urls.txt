@@ -1,6 +1,0 @@
-jdbc:sqlite:C:\Users\chris\AppData\Local\Temp\knime_01_Using_Python47727\knime_tc_1ai7tc1y70ai\db.sqlite
-jdbc:sqlite://<host>:<port>/<database_name>
-<protocol>://<host>:<port>/<database_name>
-jdbc:sqlite:C:\temp\datasets.sqlite
-jdbc:sqlite:C:\Users\chris\AppData\Local\Temp\knime_004006_Read_Wri51712\knime_tempcreator_rolqfbldhtlm\db.sqlite
-jdbc:sqlite:C:\temp\sqlite.db
